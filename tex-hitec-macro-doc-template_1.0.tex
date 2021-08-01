@@ -1,0 +1,119 @@
+%%%%%%%%%
+% CLASS %
+%%%%%%%%%
+
+\documentclass[10pt,a4paper]{hitec}
+
+%%%%%%%%%%%%%%%%
+% FONT & LINKS %
+%%%%%%%%%%%%%%%%
+
+\usepackage[hidelinks,bookmarksopen=true]{hyperref}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+
+%%%%%%%%%%%%%%%%%%%
+% MICROTYPOGRAPHY %
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage[english]{babel}
+\usepackage{microtype}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PYTHON CODE FORMATTING %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+%%%%%%%%%%%%%%
+% PROPERTIES %
+%%%%%%%%%%%%%%
+
+%\confidential{All rights reserved.}
+\title{PROJECT: Macro Title 1.00}
+%\author{John Doe}
+\date{}
+
+%%%%%%%%%
+% START %
+%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+\section*{Document Properties}
+
+\begin{tabular}{ | l | l | l |}
+\hline
+\textbf{Action} & \textbf{Name(s)} & \textbf{Date} \\ \hline
+Document Creation & John Doe & 2021-07-31 \\ \hline
+Company Review & Jane Doe & 2021-07-31 \\
+\hline
+\end{tabular}
+
+\section*{Version History}
+
+\begin{tabular}{ | r | p{5cm} | l |}
+\hline
+\textbf{Version} & \textbf{Description} & \textbf{Date} \\ \hline
+1.0 & Document created. & 2021-07-30 \\ \hline % last line without \hline
+1.1 & Document updated. & 2021-07-31 \\
+\hline
+\end{tabular}
+
+
+\section*{Last Revision}
+
+2021-07-31
+
+\section*{Confidentiality Note}
+
+2021 Company. All rights reserved.\\
+\\
+This work is protected by copyright law as an unpublished work and contains valuable trade secrets and confidential information.\\
+\\
+For use by Company personnel only.
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Section}
+
+\subsection{Subsection: Python}
+
+\begin{lstlisting}[language = Python]
+# This program prints Hello, world!
+print('Hello, world!')
+\end{lstlisting}
+
+\subsubsection{Subsubsection}
+
+\end{document}
