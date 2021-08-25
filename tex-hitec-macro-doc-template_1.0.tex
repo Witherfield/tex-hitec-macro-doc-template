@@ -18,6 +18,7 @@
 
 \usepackage[english]{babel}
 \usepackage{microtype}
+\usepackage{parskip} % SKIPPING INDENTATION + ADDING LITTLE SPACE BETWEEN PARAGRAPHS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % PYTHON CODE FORMATTING %
@@ -29,6 +30,9 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{light-gray}{gray}{0.85}
+
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
@@ -48,6 +52,12 @@
     tabsize=2
 }
 \lstset{style=mystyle}
+
+
+\newcommand{\imp}[1]{\textbf{\color{red} #1}}
+\newcommand{\df}[1]{\colorbox{light-gray}{\texttt{#1}}}
+\newcommand{\www}[1]{\colorbox{light-gray}{\texttt{\color{blue}#1}}}
+
 
 %%%%%%%%%%%%%%
 % PROPERTIES %
@@ -107,6 +117,8 @@ For use by Company personnel only.
 
 \section{Section}
 
+The \df{section} text goes here. \\ And here as well.
+
 \subsection{Subsection: Python}
 
 \begin{lstlisting}[language = Python]
@@ -115,5 +127,15 @@ print('Hello, world!')
 \end{lstlisting}
 
 \subsubsection{Subsubsection}
+
+\imp{IMPORTANT! This is not to be ignored.} 
+
+Normal text.
+
+This will include the \df{name} of the data frame.
+
+\imp{IMPORTANT! This is \df{not} to be ignored.} 
+
+This text will have a WWW address like \www{\url{www.google.com}} in it.
 
 \end{document}
